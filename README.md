@@ -1,2 +1,2 @@
-  # ionic-app
-»ùÓÚcordova¡¢angular¡¢ionic¿ª·¢APP
+ï»¿  # ionic-app
+åŸºäºcordovaã€angularã€ionicå¼€å‘APP
