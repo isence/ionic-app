@@ -1,0 +1,52 @@
+<ion-view view-title="群聊" >
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-clear" ui-sref="tab.team">
+            <i class="icon ion-search"></i>
+        </button>
+        <button class="button button-clear" ui-sref="tab.team">
+            <i class="icon ion-plus-round"></i>
+        </button>
+    </ion-nav-buttons>
+
+    <ion-content>
+        <ion-list>
+            <ion-item class=" item-icon-right item-avatar-right item-image " ng-repeat="chat in chats"
+                      type="item-text-wrap" href="#/tab/chat/{{chat.id}}">
+                <div class="row">
+                    <div class="col col-10">
+                        <img ng-src="{{chat.face}}">
+                    </div>
+                    <div class="col " id="div1" >
+                        <h2>{{chat.titles}}AAA</h2>
+
+                        <p>{{chat.detail}}</p>
+                        <div id="div2" >
+                            <p >{{chat.date}}</p>
+                            <i class="icon ion-chevron-right icon-accessory"></i>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
+        <style>
+            #div1{
+                text-align: left;
+            }
+            #div1 img{
+                width: 100%;
+                height: 80px;
+
+            }
+            #div2{
+                position:absolute;
+                right:0px;
+            }
+            #div2 p{
+                position:relative;
+                right:25px;
+            }
+
+        </style>

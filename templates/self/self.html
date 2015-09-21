@@ -1,0 +1,17 @@
+<ion-view  view-title="我"   >
+    <ion-content>
+        <ion-list>
+            <ion-item class=" item-icon-right"ng-repeat="self in selfs" href="#/tab/self/{{self.id}}">
+                <h2>{{self.titles}}</h2>
+                <i class="icon ion-chevron-right icon-accessory positive"></i>
+            </ion-item>
+
+        </ion-list>
+    </ion-content>
+</ion-view>
+<style>
+    #selfPic {
+        text-align: center;
+
+    }
+</style>

@@ -1,0 +1,35 @@
+/*低栏三个按钮*/
+ion-footer-bar a{
+    flex: 33%;
+    text-align: center;
+
+}
+
+/*首页幻灯片*/
+ion-slide div{
+    padding: 1px;
+    width:100%;
+    height:211px;
+    text-align:center;
+    overflow: hidden;
+}
+
+/*ion-popover-view*/
+ion-popover-view.fit {
+    height: auto;
+    width: 100px;
+
+}
+
+ion-popover-view.fit ion-content {
+    position: relative;
+}
+
+.platform-android ion-popover-view.fit {
+    margin-top: 10px;
+}
+
+.platform-ios ion-popover-view.fit {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

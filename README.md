@@ -1,2 +1,2 @@
   # ionic-app
-this is an ionic application
+基于cordova、angular、ionic开发APP
