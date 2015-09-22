@@ -59,8 +59,8 @@ angular.module('myApp', ['ionic', 'myApp.services', 'myApp.controllers','ngCordo
         link: function ($scope) {
           $rootScope.hideTabs = 'tabs-item-hide';
           $scope.$on('$ionicView.beforeLeave', function () {
-              //检测写一个状态是什么
-            if(!($state.includes('tab.team-detail')||$state.includes('tab.manage') ||$state.includes('tab.send') ||$state.includes('tab.message') )) {
+              //检测下一个状态是什么
+            if(!($state.includes('tab.team-detail')||$state.includes('tab.data'))){
               $rootScope.hideTabs = '';
             }
           })}
@@ -114,6 +114,16 @@ angular.module('myApp', ['ionic', 'myApp.services', 'myApp.controllers','ngCordo
           }
         }
       })
+      .state("tab.data", {
+        url: '/team/:id/:dataId',
+        views: {
+          'chat': {
+            templateUrl: "templates/team/data.html",
+            controller: 'dataDetailCtrl'
+          }
+        }
+      })
+
 
     //clubs页状态
       .state('tab.chat', {

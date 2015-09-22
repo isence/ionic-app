@@ -15,9 +15,20 @@
     </button>
   </ion-nav-buttons>
   <ion-content class="padding">
-    <p>
-      {{team.date}}
-    </p>
+    <ion-list>
+      <ion-item class=" item-icon-right" ng-repeat="date in team.date"
+                 href="#/tab/team/{{team.id}}/{{date.id}}">
+
+          <div  id="div1" >
+            <h2 >{{date.project}}</h2>
+
+            <p>详情:{{date.detail}}</p>
+            <p style="position: absolute;right: 0;top:52px;">人数:{{date.people}}</p>
+            <i class="icon ion-chevron-right icon-accessory positive"></i>
+          </div>
+
+      </ion-item>
+      </ion-list>
   </ion-content>
 
 </ion-view>

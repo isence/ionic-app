@@ -17,8 +17,17 @@ angular.module('myApp.controllers', ["ionic"])
 
 
     })
+    //获取组队中的单项
     .controller('teamDetailCtrl', function($scope, $stateParams, team) {
         $scope.team= team.get($stateParams.id);
+
+    })
+    //获取每一个项的每一个动态
+    .controller('dataDetailCtrl', function($scope, $stateParams, team) {
+
+        $scope.data=team.get($stateParams.id).date[$stateParams.dataId];
+        console.log($scope.data);
+
     })
 
     .controller('chatController', [ '$scope','chat',function($scope, chat)  {
@@ -35,18 +44,10 @@ angular.module('myApp.controllers', ["ionic"])
 
     }])
 
-    .controller('findController', function($scope,Find) {
 
-
-        $scope.finds=Find.all();
-    })
-    .controller('findDetailCtrl', function($scope, $stateParams, Find) {
-        $scope.find= Find.get($stateParams.id);
-    })
-    .controller('selfController', function($scope,Self,$rootScope) {
+    .controller('selfController', function($scope,Self) {
 
         $scope.selfs=Self.all();
-        $rootScope.hideNav='true';
 
     })
     .controller('selfDetailCtrl', function($scope, $stateParams, Self) {
